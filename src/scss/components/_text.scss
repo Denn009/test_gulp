@@ -1,0 +1,45 @@
+.title{
+  font-family: Intro, sans-serif;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 140%;
+
+  @include tablet{
+    line-height: 120%;
+  }
+
+  @include small-tablet{
+    font-size: 24px;
+  }
+}
+
+.title_h2{
+  font-family: Intro, sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 140%;
+
+  //@include small-tablet{
+  //  line-height: 120%;
+  //  font-size: 22px;
+  //}
+}
+
+.description{
+  font-family: Intro, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+
+  @include small-tablet{
+    font-size: 14px;
+  }
+}
+
+.caption{
+  font-family: Intro, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: $black;
+}

@@ -1,0 +1,65 @@
+.team{
+  position: relative;
+
+  background-color: #484283;
+  padding-bottom: 60px;
+  margin-bottom: 60px;
+}
+
+.team_bg_figure{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 35vw;
+
+  z-index: 0;
+}
+
+.team_title{
+  color: white;
+
+  padding-top: 60px;
+  padding-bottom: 40px;
+
+  @include small-tablet{
+    text-align: center;
+  }
+
+  @include mobile{
+    position: relative;
+    z-index: 5;
+  }
+}
+
+.team_carts{
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 20px;
+
+  z-index: 1;
+
+  @include small-tablet{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.team_cart{
+
+  &_img{
+    border-radius: 6px;
+    margin-bottom: 20px;
+  }
+}
+
+.team_subtitles{
+  color: white;
+  font-weight: 700;
+  font-size: 24px;
+
+  padding-bottom: 10px;
+}
+
+.team_description{
+  color: white;
+}

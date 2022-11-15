@@ -1,0 +1,22 @@
+.btn{
+  display: inline-block;
+  vertical-align: top;
+  padding: 22px 47px;
+
+  background: $orange;
+  border-radius: 4px;
+  font-size: 16px;
+
+  color: $primary;
+  transition: background-color 0.2s ease-in-out;
+
+  @include for-desktop{
+    &:hover{
+      background-color: #CC4949;
+    }
+  }
+
+  &:active{
+    background-color: #8C2828;
+  }
+}

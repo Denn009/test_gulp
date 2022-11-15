@@ -1,0 +1,147 @@
+.contacts{
+  background-color: #F3F6F6;
+  margin-bottom: 60px;
+
+  &_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include tablet{
+      flex-direction: column-reverse;
+      justify-content: center;
+    }
+  }
+
+  @include tablet{
+    padding-top: 30px;
+  }
+
+  &_left{
+    padding-bottom: 90px;
+
+    @include tablet{
+      padding-bottom: 30px;
+    }
+  }
+
+  &_title{
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    font-size: 30px;
+    color: $black;
+
+    @include tablet{
+      padding-bottom: 40px;
+    }
+  }
+}
+
+.contact_item{
+  padding-bottom: 40px;
+}
+
+.contacts_subtitle{
+  padding-bottom: 40px;
+
+  text-transform: uppercase;
+  color: #B2B5BB;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.contacts_number{
+  color: $black;
+  font-weight: 400;
+  font-size: 30px;
+
+  transition: color 0.3s ease-in-out;
+  @include for-desktop{
+    &:hover{
+      color: #6259b7;
+    }
+  }
+}
+
+.contact_address{
+  padding-top: 10px;
+
+  color: $black;
+  font-size: 18px;
+
+  @include mobile{
+    font-size: 16px;
+  }
+}
+
+.social{
+  display: flex;
+  gap: 20px;
+
+  &_link{
+    transition: opacity 0.3s ease-in-out;
+
+    @include for-desktop{
+      &:hover{
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+.callback{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 570px;
+  height: 440px;
+  background-color: #484283;
+  border-radius: 6px;
+
+  @include mobile{
+    width: 345px;
+  }
+
+  &_title{
+    padding-top: 40px;
+    padding-bottom: 10px;
+
+    color: white;
+  }
+
+  &_subtitle{
+    padding-bottom: 45px;
+
+    color: white;
+    font-size: 16px;
+
+    @include mobile{
+      width: 301px;
+      text-align: center;
+    }
+  }
+
+  &_input{
+    margin-bottom: 15px;
+    padding-left: 30px;
+
+    color: #B2B5BB;
+    font-size: 16px;
+
+    width: 500px;
+    height: 65px;
+    border-radius: 4px;
+
+    @include mobile{
+      width: 270px;
+    }
+  }
+
+  &_button{
+    margin-top: 15px;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}

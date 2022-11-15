@@ -1,0 +1,310 @@
+.catalog{
+  margin-top: 60px;
+  margin-bottom: 60px;
+  color: $black;
+
+  &_title{
+    text-align: center;
+  }
+
+  @include mobile{
+    margin-top: 30px;
+  }
+}
+
+.catalog_wrapper{
+  display: flex;
+}
+
+//catalog left
+
+.catalog_left{
+  margin-right: 20px;
+  width: 280px;
+
+  @include tablet{
+    display: none;
+  }
+}
+
+.catalog_prop{
+  margin-top: 40px;
+  background-color: #FFF4EE;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.prop_subtitle{
+  padding: 20px 20px 20px 0;
+  color: $black;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.prop_price{
+  padding-bottom: 20px;
+
+  &_caption{
+    padding-bottom: 10px;
+  }
+
+  &_wrapper{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+
+    &::before{
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 8px;
+      bottom: 8px;
+
+      width: 1px;
+      height: 34px;
+      background-color: #B2B5BB;
+      transform: translateX(-50%);
+    }
+
+    &_input{
+      text-align: center;
+      color: $black;
+
+      border: 1px solid #B2B5BB;
+      background-color: transparent;
+      width: 50%;
+      height: 50px;
+
+      &:first-child{
+        border-right: none;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+      }
+
+      &:last-child{
+        border-left: none;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+      }
+    }
+  }
+}
+
+
+.prop_female{
+  padding-bottom: 17px;
+
+  &_caption{
+    padding-bottom: 10px;
+  }
+}
+
+.custom_checkbox{
+  padding-right: 20px;
+}
+
+.prop_size{
+  padding-bottom: 20px;
+
+  &_caption{
+    padding-bottom: 10px;
+  }
+}
+
+.prop_wrapper_input{
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+
+.prop_btn{
+  background-color: $black;
+
+  @include for-desktop{
+    &:hover{
+      background-color: #31343C;
+  }}
+
+}
+
+.prop_btn_reset{
+  background-color: transparent;
+  color: $black;
+
+  @include for-desktop{
+    &:hover{
+      background-color: transparent;
+      color: black;}
+  }
+}
+
+// catalog right
+
+.catalog_right{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 40px;
+  width: calc(100% - #{300px});
+
+  @include tablet{
+    width: 100%;
+  }
+
+  @include small-tablet{
+    margin-top: 30px;
+  }
+}
+
+.catalog_products{
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: left;
+
+  @include small-tablet{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.products_image{
+  position: relative;
+  width: 100%;
+  max-height: 293px;
+
+  &_item{
+    position: relative;
+    height: 293px;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+
+    @include mobile{
+      height: 190px;
+    }
+  }
+
+  &_btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(255, 255, 255, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+    @include tablet{
+      gap: 20px;
+    }
+
+    @include mobile{
+
+    }
+  }
+
+  &:hover{
+       .products_image_btns{
+         opacity: 1;
+         visibility: visible;
+       }
+     }
+
+  &:focus{
+    .products_image_btns{
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.product-button{
+  &--disabled{
+    opacity: 0.4;
+    pointer-events: none;
+  }
+}
+
+.product_image_btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $black;
+  height: 80px;
+  width: 80px;
+  border-radius: 100%;
+
+  transition: background-color 0.3s ease-in-out;
+
+  @include for-desktop{
+    &:hover{
+      background-color: #31343C;
+    }
+  }
+
+  @include mobile{
+    height: 50px;
+    width: 50px;
+  }
+}
+
+.product_description{
+
+  // clamp оставляем только одну строку в названии
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  line-clamp: 1;
+  box-orient: vertical;
+  // clamp
+
+  margin-top: 10px;
+  color: $black;
+}
+
+.product_price{
+  margin-top: 5px;
+  font-size: 20px;
+}
+
+.product_btn{
+  max-width: 250px;
+  margin-top: 40px;
+}
+
+//sort
+
+.sort{
+  display: none;
+}
+
+@include tablet{
+  .sort{
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+  }
+
+  .catalog_left--active{
+    display: block;
+    position: absolute;
+    z-index: 6;
+  }
+}
+
+

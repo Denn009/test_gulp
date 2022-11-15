@@ -1,0 +1,40 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+@import "reset";
+
+
+// подключение компонентов страницы
+@import "./components/btn";
+@import "./components/text";
+@import "./components/checkbox_custom";
+@import "./components/range-slider";
+@import "./components/size-table";
+@import "./components/tooltip";
+@import "./components/cart";
+@import "./components/ordering";
+@import "./components/burger";
+
+
+// подключения секций страницы
+@import "./components/header";
+@import "./components/hero";
+@import "./components/catalog";
+@import "./components/about";
+@import "./components/quiz";
+@import "./components/team";
+@import "./components/faq";
+@import "./components/contacts";
+@import "./components/map";
+@import "./components/footer";
+@import "./components/prod_modal";
+
+
+
+
+
+
+
+

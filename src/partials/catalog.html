@@ -1,0 +1,75 @@
+<section class="catalog">
+  <div class="container container_catalog">
+    <button class="sort">
+      <img src="./img/sort.png" alt="sort" class="sort_img">
+    </button>
+    <h2 class="catalog_title title_h2">Каталог</h2>
+    <div class="catalog_wrapper">
+      <div class="catalog_left">
+        <div class="catalog_prop">
+          <h3 class="prop_subtitle">Подбор <br> по параметрам</h3>
+
+          <div class="prop_price" id="slider">
+            <div class="prop_price_caption caption">Цена, руб</div>
+            <div class="prop_price_wrapper">
+              <input type="text" class="prop_price_wrapper_input description" id="input-0">
+              <input type="text" class="prop_price_wrapper_input description" id="input-1">
+            </div>
+            <div class="prop_price_element" id="range-slider"></div>
+          </div><!--prop_price-->
+
+          <div class="prop_female">
+            <div class="prop_female_caption caption">Пол</div>
+            <label class="custom_checkbox checkbox">
+              <input type="checkbox" class="custom_checkbox_input checkbox_input">
+              <span class="custom_checkbox_content checkbox_content">мужской</span>
+            </label>
+            <label class="custom_checkbox checkbox">
+              <input type="checkbox" class="custom_checkbox_input checkbox_input">
+              <span class="custom_checkbox_content checkbox_content">женский</span>
+            </label>
+          </div><!--prop_female-->
+
+          <div class="prop_size">
+            <div class="prop_size_caption caption">Размер</div>
+            <div class="prop_size_table">
+              <table class="table_sizes">
+                <caption>Таблица размеров</caption>
+                <tbody>
+                <tr>
+                  <td>35</td>
+                  <td>36</td>
+                  <td>37</td>
+                </tr>
+                <tr>
+                  <td>38</td>
+                  <td>39</td>
+                  <td>40</td>
+                </tr>
+                <tr>
+                  <td>41</td>
+                  <td>42</td>
+                  <td>43</td>
+                </tr>
+                </tbody>
+              </table>
+            </div><!-- prop_size_table-->
+          </div><!-- prop_size-->
+
+          <div class="prop_wrapper_input">
+            <button class="prop_btn btn btn--secondary">Применить</button>
+            <button class="prop_btn_reset btn btn--reset">Сбросить</button>
+          </div><!-- prop_wrapper_input-->
+        </div><!-- catalog_prop-->
+
+      </div> <!--  .catalog_left-->
+
+      <div class="catalog_right">
+        <ul class="catalog_products"> </ul> <!--  .catalog_products-->
+        <button class="product_btn btn">Показать ещё</button>
+      </div> <!--  .catalog_right-->
+    </div>
+
+
+  </div> <!--  .container-->
+</section>
